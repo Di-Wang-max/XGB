@@ -32,7 +32,7 @@ if st.button("Submit"):
     input_numericalyuan = pd.DataFrame(input_numerical, columns=feature_names)
     input_numerical = pd.DataFrame(input_numerical, columns=feature_names)
 
-    input_numerical[['AFP','Ki67','Maximumdiameter']] = scaler.transform(input_numerical[['AFP','Ki67','Maximumdiameter']])
+    input_numerical[['AFP','Maximumdiameter','Ki67']] = scaler.transform(input_numerical[['AFP','Maximumdiameter','Ki67']])
 
         # 使用模型进行预测概率
     prediction_proba = XGB.predict_proba(input_numerical)
