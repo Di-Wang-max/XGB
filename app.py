@@ -27,12 +27,12 @@ if st.button("Submit"):
     scaler = joblib.load("scaler.pkl")
     
     # Store inputs into dataframe
-    input_numerical = np.array([AFP, Ki67, Maximumdiameter, TSC2,MVI, Satellite]).reshape(1, -1)
-    feature_names  = ["AFP", "Ki67", "Maximumdiameter","TSC2","MVI","Satellite"]
+    input_numerical = np.array([AFP, Ki67, MVI,Maximumdiameter, Satellite,TSC2]).reshape(1, -1)
+    feature_names  = ['AFP', 'Ki67', 'MVI', 'Maximumdiameter', 'Satellite', 'TSC2']
     input_numericalyuan = pd.DataFrame(input_numerical, columns=feature_names)
     input_numerical = pd.DataFrame(input_numerical, columns=feature_names)
 
-    input_numerical[['AFP','Maximumdiameter','Ki67']] = scaler.transform(input_numerical[['AFP','Maximumdiameter','Ki67']])
+    input_numerical[['AFP','Ki67','Maximumdiameter']] = scaler.transform(input_numerical[['AFP','Ki67','Maximumdiameter']])
 
         # 使用模型进行预测概率
     prediction_proba = XGB.predict_proba(input_numerical)
