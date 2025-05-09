@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import shap
 import streamlit.components.v1 as components
+import matplotlib
 # Title
 # 使用 Markdown 和 HTML 调整字体大小
 st.markdown('<h2 style="font-size:20px;">XGBoost-Based HCC Recurrence Prediction Model Post-Liver Transplant</h2>', unsafe_allow_html=True)
