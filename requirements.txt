@@ -5,5 +5,5 @@ pandas
 shap
 scikit-learn
 xgboost
-matplotlib
+pip install matplotlib
 ipython
